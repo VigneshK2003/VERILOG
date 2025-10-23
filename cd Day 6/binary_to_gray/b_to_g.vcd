@@ -1,0 +1,64 @@
+$date
+	Thu Oct 23 18:07:54 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module b_to_g_tb $end
+$var wire 3 ! g [2:0] $end
+$var reg 3 " b [2:0] $end
+$scope module uut $end
+$var wire 3 # b [2:0] $end
+$var wire 3 $ g [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 !
+b1 $
+b1 "
+b1 #
+#20
+b11 !
+b11 $
+b10 "
+b10 #
+#30
+b10 !
+b10 $
+b11 "
+b11 #
+#40
+b110 !
+b110 $
+b100 "
+b100 #
+#50
+b111 !
+b111 $
+b101 "
+b101 #
+#60
+b101 !
+b101 $
+b110 "
+b110 #
+#70
+b100 !
+b100 $
+b111 "
+b111 #
+#80
