@@ -1,0 +1,72 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5d05003dcf30 .scope module, "g_to_b_tb" "g_to_b_tb" 2 1;
+ .timescale 0 0;
+v0x5d05003f2000_0 .net "b", 2 0, L_0x5d05003f2530;  1 drivers
+v0x5d05003f20c0_0 .var "g", 2 0;
+S_0x5d05003dd0c0 .scope module, "uut" "g_to_b" 2 4, 3 1 0, S_0x5d05003dcf30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "g";
+    .port_info 1 /OUTPUT 3 "b";
+L_0x5d05003f23f0 .functor XOR 1, L_0x5d05003f2260, L_0x5d05003f2350, C4<0>, C4<0>;
+L_0x5d05003f28b0 .functor XOR 1, L_0x5d05003f26a0, L_0x5d05003f2740, C4<0>, C4<0>;
+v0x5d05003dd2a0_0 .net *"_ivl_10", 0 0, L_0x5d05003f23f0;  1 drivers
+v0x5d05003f1870_0 .net *"_ivl_16", 0 0, L_0x5d05003f26a0;  1 drivers
+v0x5d05003f1950_0 .net *"_ivl_18", 0 0, L_0x5d05003f2740;  1 drivers
+v0x5d05003f1a10_0 .net *"_ivl_19", 0 0, L_0x5d05003f28b0;  1 drivers
+v0x5d05003f1af0_0 .net *"_ivl_3", 0 0, L_0x5d05003f2190;  1 drivers
+v0x5d05003f1c20_0 .net *"_ivl_7", 0 0, L_0x5d05003f2260;  1 drivers
+v0x5d05003f1d00_0 .net *"_ivl_9", 0 0, L_0x5d05003f2350;  1 drivers
+v0x5d05003f1de0_0 .net "b", 2 0, L_0x5d05003f2530;  alias, 1 drivers
+v0x5d05003f1ec0_0 .net "g", 2 0, v0x5d05003f20c0_0;  1 drivers
+L_0x5d05003f2190 .part v0x5d05003f20c0_0, 2, 1;
+L_0x5d05003f2260 .part L_0x5d05003f2530, 2, 1;
+L_0x5d05003f2350 .part v0x5d05003f20c0_0, 1, 1;
+L_0x5d05003f2530 .concat8 [ 1 1 1 0], L_0x5d05003f28b0, L_0x5d05003f23f0, L_0x5d05003f2190;
+L_0x5d05003f26a0 .part L_0x5d05003f2530, 1, 1;
+L_0x5d05003f2740 .part v0x5d05003f20c0_0, 0, 1;
+    .scope S_0x5d05003dcf30;
+T_0 ;
+    %vpi_call 2 6 "$monitor", "Time=%0t, g=%b | b=%b ", $time, v0x5d05003f20c0_0, v0x5d05003f2000_0 {0 0 0};
+    %vpi_call 2 7 "$dumpfile", "g_to_b.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5d05003dcf30 {0 0 0};
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x5d05003f20c0_0, 0, 3;
+    %delay 10, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "g_to_b_tb.v";
+    "g_to_b.v";
